@@ -147,12 +147,6 @@ Este projeto também serve como base para:
 
 ---
 
-## Autor
-
-Desenvolvido como projeto de estudo e evolução em desenvolvimento de software.
-
----
-
 ## Licença
 
 Este projeto é livre para uso educacional e pessoal.
