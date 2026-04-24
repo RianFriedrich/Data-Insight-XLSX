@@ -1,0 +1,77 @@
+.root {
+  -fx-background-color: #1e1e1e;
+  -fx-font-family: "Segoe UI";
+}
+
+/* Botões */
+.button {
+  -fx-background-color: #2d2d2d;
+  -fx-text-fill: white;
+  -fx-background-radius: 8;
+  -fx-padding: 8 12;
+}
+
+.button:hover {
+  -fx-background-color: #3c3c3c;
+}
+
+/* ComboBox */
+.combo-box {
+  -fx-background-color: #2d2d2d;
+  -fx-text-fill: white;
+}
+
+/* TextField */
+.text-field {
+  -fx-background-color: #2d2d2d;
+  -fx-text-fill: white;
+  -fx-prompt-text-fill: #888;
+}
+
+/* Tabela */
+.table-view {
+  -fx-background-color: #252526;
+  -fx-control-inner-background: #252526;
+  -fx-table-cell-border-color: transparent;
+}
+
+.table-row-cell {
+  -fx-background-color: #252526;
+  -fx-text-fill: white;
+}
+
+.table-row-cell:odd {
+  -fx-background-color: #2a2a2a;
+}
+
+.table-row-cell:selected {
+  -fx-background-color: #007acc;
+}
+
+/* Cabeçalho */
+.table-view .column-header {
+  -fx-background-color: #333;
+}
+
+.table-view .column-header .label {
+  -fx-text-fill: white;
+}
+
+/* Tooltip */
+.tooltip {
+  -fx-background-color: #333;
+  -fx-text-fill: white;
+}
+
+/* Gráfico */
+.chart {
+  -fx-background-color: #1e1e1e;
+}
+
+.chart-plot-background {
+  -fx-background-color: #1e1e1e;
+}
+
+.chart-bar {
+  -fx-bar-fill: #4fc3f7;
+}
