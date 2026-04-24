@@ -71,7 +71,7 @@ Você pode utilizá-lo para testar todas as funcionalidades da aplicação imedi
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/SEU-USUARIO/data-insight-xlsx.git
+git clone https://github.com/RianFriedrich/data-insight-xlsx.git
 cd data-insight-xlsx
 ```
 
