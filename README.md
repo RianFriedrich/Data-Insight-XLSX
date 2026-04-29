@@ -1,152 +1,159 @@
 # Data Insight XLSX
-
-Uma aplicação desktop desenvolvida em Java com JavaFX que permite ler arquivos Excel (.xlsx), visualizar dados em formato de tabela, aplicar filtros, ordenações e gerar gráficos interativos a partir das informações carregadas.
-
+ 
+Aplicação desktop desenvolvida em **Java + JavaFX** para análise interativa de dados a partir de arquivos Excel (.xlsx).
+ 
+O sistema permite transformar planilhas em **tabelas dinâmicas, métricas e dashboards visuais**, facilitando a exploração e interpretação de dados.
+ 
 ---
-
-## Sobre o Projeto
-
-O Data Insight XLSX foi criado com o objetivo de transformar dados brutos de planilhas em informações visuais e manipuláveis de forma simples e intuitiva.
-
-A aplicação permite que o usuário carregue um arquivo Excel e, automaticamente:
-
-* Estruture os dados em uma tabela dinâmica
-* Identifique atributos (colunas) e seus respectivos valores
-* Navegue e analise os dados de forma interativa
-
+ 
+## ✨ Visão Geral
+ 
+O Data Insight XLSX foi projetado para fornecer uma forma simples e eficiente de analisar dados sem depender de ferramentas complexas.
+ 
+A aplicação permite:
+ 
+- Importar arquivos Excel
+- Visualizar dados em tabela dinâmica
+- Filtrar e ordenar informações
+- Identificar valores extremos
+- Gerar métricas automaticamente
+- Visualizar dados em gráficos interativos
 ---
-
-## Funcionalidades
-
-* Leitura de arquivos .xlsx
-* Exibição automática dos dados em tabela
-* Seleção de atributos (colunas)
-* Filtro dinâmico por texto
-* Ordenação automática (numérica e alfabética)
-* Identificação de maior valor
-* Identificação de menor valor
-* Destaque visual da linha selecionada
-* Geração de gráfico interativo (BarChart)
-* Interação com gráfico (clique sincroniza com a tabela)
-* Tooltip com valores ao passar o mouse
-
+ 
+## ⚙️ Funcionalidades
+ 
+### 📊 Manipulação de Dados
+- Leitura de arquivos `.xlsx` (Apache POI)
+- Geração automática de colunas na tabela
+- Ordenação inteligente (numérica e textual)
+- Filtro dinâmico por atributo
+### 🔎 Análise de Dados
+- Identificação de maior valor
+- Identificação de menor valor
+- Destaque de linha selecionada
+- Cálculo automático de:
+  - Média
+  - Soma
+  - Mínimo
+  - Máximo
+  - Quantidade de registros
+### 📈 Dashboard
+- Exibição dinâmica de métricas
+- Atualização automática ao selecionar coluna
+- Integração com gráficos
+### 📊 Visualização
+- Gráfico de barras (BarChart)
+- Atualização automática ao trocar atributo
+- Tooltips com valores
+- Interação com gráfico
+### 📤 Exportação
+- Exportação dos dados filtrados para CSV
 ---
-
-## Exemplo de Dados
-
-O projeto já inclui um arquivo de exemplo:
-
-dados.xlsx
-
-Esse arquivo contém registros como:
-
-* Nome
-* Idade
-* Altura
-* Salário
-
-Você pode utilizá-lo para testar todas as funcionalidades da aplicação imediatamente.
-
+ 
+## 🧠 Arquitetura do Projeto
+ 
+O projeto foi estruturado seguindo separação de responsabilidades:
+ 
+```
+src/main/java/app/
+├── controller/
+│    └── MainController.java
+│
+├── model/
+│    └── DataRow.java
+│
+├── service/
+│    ├── ExcelReader.java
+│    └── DataAnalyzer.java
+│
+├── ui/
+│    ├── DashboardView.java
+│    ├── MainView.java
+│    └── TableViewComponent.java
+│
+└── MainApp.java
+```
+ 
+```
+src/main/resources/
+├── view/
+│    └── main.fxml
+└── style.css
+```
+ 
+### 🔹 Camadas
+ 
+- **Controller** → Gerencia eventos da interface
+- **Service** → Processamento de dados e regras de negócio
+- **Model** → Estrutura dos dados
+- **UI/View** → Componentes visuais
+- **FXML** → Definição declarativa da interface
 ---
-
-## Tecnologias Utilizadas
-
-* Java 17
-* JavaFX
-* Maven
-* Apache POI (leitura de Excel)
-
+ 
+## 🛠️ Tecnologias
+ 
+- Java 17
+- JavaFX
+- Maven
+- Apache POI
 ---
-
-## Como Executar o Projeto
-
+ 
+## ▶️ Como Executar
+ 
 ### Pré-requisitos
-
-* Java JDK 17 instalado
-* Maven configurado no PATH
-* VS Code ou outra IDE Java (opcional)
-
+ 
+- Java JDK 17+
+- Maven instalado
 ### Passos
-
-1. Clone o repositório:
-
+ 
 ```bash
 git clone https://github.com/RianFriedrich/data-insight-xlsx.git
 cd data-insight-xlsx
-```
-
-2. Execute o projeto:
-
-```bash
 mvn clean javafx:run
 ```
-
-3. Clique em **"Carregar Excel"**
-4. Selecione o arquivo `dados.xlsx`
-5. Explore os dados
-
+ 
 ---
-
-## Como Usar
-
-* Use o seletor para escolher um atributo (coluna)
-* Digite no campo de filtro para buscar valores
-* Clique em "Maior" ou "Menor" para destacar registros extremos
-* Clique em "Gerar Gráfico" para visualizar os dados
-* Clique nas barras do gráfico para sincronizar com a tabela
-
+ 
+## 🧪 Como Usar
+ 
+1. Clique em **"Carregar Excel"**
+2. Selecione um arquivo `.xlsx`
+3. Escolha uma coluna no seletor
+4. Utilize as funcionalidades:
+   - 🔍 Filtrar dados
+   - ⬆️⬇️ Encontrar maior/menor valor
+   - 📊 Visualizar dashboard
+   - 📈 Analisar gráfico
+   - 📤 Exportar CSV
 ---
-
-## Estrutura do Projeto
-
-```
-src/
- └── main/
-     ├── java/
-     │   └── app/
-     │       ├── App.java
-     │       └── service/
-     │           └── ExcelReader.java
-     └── resources/
-         └── style.css
-```
-
+ 
+## 🚧 Roadmap
+ 
+- [ ] Gráfico de linha
+- [ ] Estatísticas avançadas (variância, desvio padrão)
+- [ ] Suporte a múltiplas abas Excel
+- [ ] Dashboard com múltiplos gráficos
+- [ ] Melhorias de performance
+- [ ] Versão web futura
 ---
-
-## Possibilidades de Expansão
-
-Este projeto possui grande potencial de evolução:
-
-* Exportação de relatórios
-* Suporte a múltiplas planilhas
-* Gráficos adicionais (pizza, linha, etc.)
-* Integração com banco de dados
-* Dashboard completo
-* Upload de arquivos via web (versão web futura)
-* Análise estatística automática
-
+ 
+## 🎯 Objetivo
+ 
+Este projeto foi desenvolvido com foco em:
+ 
+- Prática de JavaFX
+- Manipulação de dados
+- Visualização de informações
+- Construção de portfólio profissional
 ---
-
-## Objetivo
-
-Este projeto também serve como base para:
-
-* Portfólio profissional
-* Estudos de JavaFX
-* Manipulação de dados
-* Visualização de dados
-* Desenvolvimento de aplicações desktop
-
+ 
+## ⚠️ Observações
+ 
+- Valores não numéricos são ignorados em cálculos
+- Arquivos muito grandes podem impactar a performance
+- A aplicação interpreta automaticamente tipos de dados
 ---
-
-## Observações
-
-* O sistema tenta interpretar automaticamente valores numéricos
-* Campos inválidos são ignorados em cálculos
-* Arquivos muito grandes podem impactar performance
-
----
-
-## Licença
-
-Este projeto é livre para uso educacional e pessoal.
+ 
+## 📄 Licença
+ 
+Uso livre para fins educacionais e pessoais.
