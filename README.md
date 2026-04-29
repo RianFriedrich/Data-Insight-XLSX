@@ -127,16 +127,6 @@ mvn clean javafx:run
    - 📤 Exportar CSV
 ---
  
-## 🚧 Roadmap
- 
-- [ ] Gráfico de linha
-- [ ] Estatísticas avançadas (variância, desvio padrão)
-- [ ] Suporte a múltiplas abas Excel
-- [ ] Dashboard com múltiplos gráficos
-- [ ] Melhorias de performance
-- [ ] Versão web futura
----
- 
 ## 🎯 Objetivo
  
 Este projeto foi desenvolvido com foco em:
