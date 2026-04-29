@@ -1,0 +1,8 @@
+app\MainApp.class
+app\ui\DashboardView.class
+app\service\DataAnalyzer.class
+app\ui\MainView.class
+app\model\DataRow.class
+app\controller\MainController.class
+app\service\ExcelReader.class
+app\ui\TableViewComponent.class

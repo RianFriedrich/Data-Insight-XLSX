@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="app.controller.MainController">
+
+    <TabPane>
+
+        <tabs>
+
+          
+            <Tab text="Tabela">
+                <VBox spacing="15" style="-fx-padding: 15;">
+                    <Button fx:id="btnCarregar" text="Carregar Excel"/>
+
+                    <HBox spacing="10">
+                        <ComboBox fx:id="seletor"/>
+                        <Button fx:id="btnMaior" text="Maior"/>
+                        <Button fx:id="btnMenor" text="Menor"/>
+                        <TextField fx:id="filtro" promptText="Filtro"/>
+                        <Button fx:id="btnExportar" text="Exportar CSV"/>
+                    </HBox>
+
+                    <TableView fx:id="tabela"/>
+                </VBox>
+            </Tab>
+
+       
+           <Tab text="Dashboard">
+                <VBox spacing="10" style="-fx-padding: 15;">
+                    <VBox fx:id="dashboardBox"/>
+                </VBox>
+            </Tab>
+
+        </tabs>
+
+    </TabPane>
+
+</VBox>
